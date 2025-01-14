@@ -4,7 +4,7 @@ import { signOut } from './action';
 const SignOut = async () => {
   const response = await signOut();
   if (!response.error) return redirect('/');
-  return redirect('/dashboard');
+  return redirect('/case-studies');
 };
 
 export default SignOut;

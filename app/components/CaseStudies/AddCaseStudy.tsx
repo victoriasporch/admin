@@ -47,6 +47,7 @@ const AddCaseStudy = () => {
       await AddToTable<CoursesFormData>('case_studies', data);
       toast.success('Added successful');
       test.setInvalidateCaseStudies(true);
+      form.reset();
     } catch (error: any) {
       toast.error(error.message);
       console.log({ error });

@@ -27,7 +27,7 @@ const CaseStudy = () => {
   }, [id, caseStudies, router]);
 
   return (
-    <div>
+    <div className="bg-gray-100">
       <section className="pt-5 pb-10 lg:pb-20 lg:pt-10">
         <Container>
           <div className="">
@@ -37,7 +37,7 @@ const CaseStudy = () => {
 
             {!caseStudiesLoading && caseStudy && (
               <div>
-                <div className="grid grid-cols-[50fr_50fr] gap-5 mb-5 border-b pb-10">
+                <div className="grid grid-cols-1 md:grid-cols-[50fr_50fr] gap-5 mb-5 border-b pb-10">
                   <article className="space-y-5">
                     <h1 className="font-normal text-4xl">{caseStudy.title}</h1>
                     <p className="text-md text-gray-500">

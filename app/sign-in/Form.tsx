@@ -30,9 +30,9 @@ const Form = () => {
   const router = useRouter();
 
   const onSubmit = async (data: SignInFormData) => {
-    const { error } = await signIn(data);
+    const result = await signIn(data);
 
-    if (error) return toast.error(error.message);
+    if (result?.error) return toast.error(error.message);
 
     router.replace('/case-studies');
   };
