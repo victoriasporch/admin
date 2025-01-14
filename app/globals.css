@@ -2,20 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html {
+  scroll-behavior: smooth;
+}
+html {
+  scrollbar-color: #88938d #f9f9f9;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html:hover {
+  scrollbar-color: #88938d #f9f9f9;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
 }
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-outfit);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+  font-family: var(--font-libre-baskerville);
+}
+
+.editor-custom {
+  border-radius: 4px;
+}
+
+.ProseMirror-Viewer {
+  outline: none;
+  @apply max-w-full max-h-full py-1 prose-ul:my-2 prose-ol:my-2 prose-li:marker:!text-black rounded-sm min-h-[350px] mx-auto prose-ol:px-4 prose-sm prose prose-p:text-black prose-strong:text-black prose-ul:px-4 prose-headings:text-black prose-headings:my-2 prose-headings:mt-6 prose-p:my-2 sm:prose-base lg:prose-lg xl:prose-sm focus:outline-none;
+}
+.ProseMirror {
+  outline: none;
+  @apply max-w-full max-h-full py-1 px-4 prose-ul:my-2 prose-ol:my-2 prose-li:marker:!text-black rounded-sm min-h-[350px] mx-auto prose-ol:px-4 prose-sm prose prose-p:text-black prose-strong:text-black prose-ul:px-4 prose-headings:text-black prose-headings:my-2 prose-p:my-2 sm:prose-base lg:prose-lg xl:prose-sm focus:outline-none;
+}
+
+.tiptap {
+  :first-child {
+    margin-top: 0;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    margin: 1.5rem 0;
+    max-width: 100%;
+
+    &.ProseMirror-selectednode {
+      outline: 3px solid var(--purple);
+    }
+  }
 }
